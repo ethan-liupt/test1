@@ -13,7 +13,11 @@
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; max-width: 900px; margin: auto; padding: 0; background-color: var(--light); color: var(--dark); }
         
         /* Navigation */
-        nav { display: flex; justify-content: center; padding: 1.5rem; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        nav { 
+            position: sticky;
+            top: 0;
+            z-idnex: 1000;
+            display: flex; justify-content: center; padding: 1.5rem; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
         nav a { margin: 0 15px; text-decoration: none; color: var(--dark); font-weight: 600; transition: color 0.3s; }
         nav a:hover { color: var(--primary); }
 

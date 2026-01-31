@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patents | Portfolio</title>
+    <style>
+        :root {
+            --primary-blue: #3b82f6;
+            --bg-light: #f8fafc;
+            --text-main: #1e293b;
+            --text-sub: #64748b;
+            --status-granted: #dcfce7;
+            --status-granted-text: #166534;
+            --status-pending: #fef9c3;
+            --status-pending-text: #854d0e;
+        }
+
+        body { font-family: 'Inter', -apple-system, sans-serif; background-color: var(--bg-light); margin: 0; padding: 40px 20px; color: var(--text-main); }
+        
+        nav { text-align: center; margin-bottom: 50px; }
+        nav a { margin: 0 15px; text-decoration: none; color: var(--text-main); font-weight: 600; }
+
+        .patent-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* The Card Container */
+        .patent-card {
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #f1f5f9;
+        }
+
+        /* Soft background circles (decorative) */
+        .patent-card::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(241, 245, 249, 0.5);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; z-index: 1; }
+
+        .icon-box {
+            background: var(--primary-blue);
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        .status-badge {
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .status-granted { background: var(--status-granted); color: var(--status-granted-text); }
+        .status-pending { background: var(--status-pending); color: var(--status-pending-text); }
+
+        .patent-id { color: var(--primary-blue); font-weight: 700; font-size: 0.85rem; margin-bottom: 15px; z-index: 1; }
+        
+        h2 { font-size: 1.8rem; line-height: 1.2; margin: 0 0 20px 0; z-index: 1; color: #0f172a; }
+
+        .authors { font-size: 0.9rem; color: var(--text-sub); margin-bottom: 25px; z-index: 1; }
+        .authors b { color: var(--text-main); }
+
+        .description { font-size: 1rem; line-height: 1.6; color: var(--text-sub); margin-bottom: 30px; z-index: 1; }
+
+        .footer {
+            border-top: 1px solid #f1f5f9;
+            padding-top: 20px;
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            font-weight: 600;
+            z-index: 1;
+        }
+
+        @media (max-width: 400px) { .patent-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">About</a>
+        <a href="publications.html">Publications</a>
+        <a href="activity.html">Activity</a>
+        <a href="patents.html">Patents</a>
+    </nav>
+
+    <div class="patent-grid">
+        
+        <div class="patent-card">
+            <div class="card-header">
+                <div class="icon-box">💡</div>
+                <div class="status-badge status-granted">✓ GRANTED</div>
+            </div>
+            <div class="patent-id">US 11,452,876 B2</div>
+            <h2>Biocompatible Multi-channel Neural Probe with Integrated Fluidic Micro-channels</h2>
+            <div class="authors">Inventors: <b>Julian Thorne, Sarah Miller</b> • 2022</div>
+            <p class="description">A neural interface capable of simultaneous electrical recording and pharmacological micro-infusion.</p>
+            <div class="footer">🛡️ Patent Protection Secured</div>
+        </div>
+
+        <div class="patent-card">
+            <div class="card-header">
+                <div class="icon-box">💡</div>
+                <div class="status-badge status-pending">🕒 PENDING</div>
+            </div>
+            <div class="patent-id">US 2023/0012345 A1</div>
+            <h2>Self-assembling Nanofiber Scaffolds for Spinal Cord Repair</h2>
+            <div class="authors">Inventors: <b>Julian Thorne</b> • 2023</div>
+            <p class="description">Synthetic peptide structures that mimic the extracellular matrix to promote axonal regrowth.</p>
+            <div class="footer">🛡️ Patent Protection Secured</div>
+        </div>
+
+    </div>
+
+</body>
+</html>

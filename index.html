@@ -3,12 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>About Me | My Portfolio</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; }
-        nav { background: #f4f4f4; padding: 1rem; margin-bottom: 2rem; }
-        nav a { margin-right: 15px; text-decoration: none; color: #333; font-weight: bold; }
-        nav a:hover { color: #007bff; }
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; max-width: 900px; margin: auto; padding: 0; background-color: var(--light); color: var(--dark); }
+        
+        /* Navigation */
+        nav { display: flex; justify-content: center; padding: 1.5rem; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        nav a { margin: 0 15px; text-decoration: none; color: var(--dark); font-weight: 600; transition: color 0.3s; }
+        nav a:hover { color: var(--primary); }
+
+        /* Profile Header */
+        .profile-card { background: white; padding: 3rem 2rem; margin-top: 2rem; border-radius: 15px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+        .profile-img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid var(--primary); margin-bottom: 1rem; }
+        h1 { margin: 10px 0; font-size: 2.5rem; color: var(--dark); }
+        .tagline { color: var(--primary); font-weight: 500; font-size: 1.2rem; margin-bottom: 2rem; }
+        
+        /* Layout Sections */
+        .container { padding: 2rem; }
+        .grid { display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; }
+        
+        .bio h2 { border-left: 5px solid var(--primary); padding-left: 15px; }
+        
+        .skills { background: #eff6ff; padding: 1.5rem; border-radius: 10px; }
+        .skill-tag { display: inline-block; background: white; padding: 5px 12px; margin: 4px; border-radius: 20px; font-size: 0.85rem; border: 1px solid #dbeafe; font-weight: 500; }
+
+        @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -19,10 +43,37 @@
         <a href="activity.html">Activity</a>
     </nav>
 
-    <main>
-        <h1>Welcome!</h1>
-        <p>This is where your specific page content goes.</p>
-    </main>
+    <div class="container">
+        <section class="profile-card">
+            <img src="profile.jpg" alt="Your Name" class="profile-img">
+            <h1>Your Name</h1>
+            <p class="tagline">Researcher • Designer • Developer</p>
+            <p>Welcome to my digital space. I'm passionate about solving complex problems through technology and data.</p>
+        </section>
+
+        <div class="grid">
+            <section class="bio">
+                <h2>The Story So Far</h2>
+                <p>Hello! I am a [Your Profession/Student Status] currently based in [Your City]. My work focuses on the intersection of [Interest A] and [Interest B]. I enjoy building tools that help people understand the world better.</p>
+                <p>When I'm not working, you can find me [Hobby 1], [Hobby 2], or exploring new libraries on GitHub.</p>
+            </section>
+
+            <aside class="skills">
+                <h3>Expertise</h3>
+                <span class="skill-tag">HTML/CSS</span>
+                <span class="skill-tag">Data Analysis</span>
+                <span class="skill-tag">Research</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Open Source</span>
+                
+                <h3 style="margin-top: 1.5rem;">Connect</h3>
+                <p style="font-size: 0.9rem;">
+                    Email: <a href="mailto:hello@example.com" style="color: var(--primary);">hello@example.com</a><br>
+                    Twitter: <a href="#" style="color: var(--primary);">@yourhandle</a>
+                </p>
+            </aside>
+        </div>
+    </div>
 
 </body>
 </html>

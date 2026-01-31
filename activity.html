@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity | My Portfolio</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; max-width: 900px; margin: auto; padding: 0; background-color: var(--light); color: var(--dark); }
+        
+        /* Navigation */
+        nav { display: flex; justify-content: center; padding: 1.5rem; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        nav a { margin: 0 15px; text-decoration: none; color: var(--dark); font-weight: 600; }
+        nav a:hover { color: var(--primary); }
+
+        .container { padding: 2rem; }
+        h1 { margin-bottom: 2rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
+
+        /* Activity List Styling */
+        .activity-list { list-style: none; padding: 0; }
+        
+        .activity-item {
+            display: flex;
+            gap: 20px;
+            background: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            align-items: center;
+        }
+
+        .activity-image {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            flex-shrink: 0; /* Prevents image from squishing */
+            background: #e2e8f0; /* Placeholder color */
+        }
+
+        .activity-content h3 { margin: 0 0 5px 0; color: var(--primary); }
+        .date { font-size: 0.85rem; color: var(--gray); font-weight: bold; text-transform: uppercase; }
+        .description { margin-top: 10px; font-size: 0.95rem; }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .activity-item { flex-direction: column; text-align: center; }
+            .activity-image { width: 100%; height: 200px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">About Me</a>
+        <a href="publications.html">Publications</a>
+        <a href="activity.html">Activity</a>
+    </nav>
+
+    <div class="container">
+        <h1>Recent Activity & Projects</h1>
+
+        <ul class="activity-list">
+            
+            <li class="activity-item">
+                <img src="project1.jpg" alt="Project One" class="activity-image">
+                <div class="activity-content">
+                    <span class="date">January 2026</span>
+                    <h3>Guest Lecture at Tech University</h3>
+                    <p class="description">Presented a seminar on "The Future of Static Web Architecture" to a class of 50 undergraduate students.</p>
+                </div>
+            </li>
+
+            <li class="activity-item">
+                <img src="project2.jpg" alt="Project Two" class="activity-image">
+                <div class="activity-content">
+                    <span class="date">December 2025</span>
+                    <h3>Open Source Contribution</h3>
+                    <p class="description">Successfully merged a major pull request in a popular data visualization library, improving rendering speeds by 20%.</p>
+                </div>
+            </li>
+
+            <li class="activity-item">
+                <img src="project3.jpg" alt="Project Three" class="activity-image">
+                <div class="activity-content">
+                    <span class="date">October 2025</span>
+                    <h3>Attended WebDev Summit</h3>
+                    <p class="description">Participated in a three-day intensive workshop focused on accessible UI/UX design patterns.</p>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+</body>
+</html>
